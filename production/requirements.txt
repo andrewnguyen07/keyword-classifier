@@ -1,0 +1,9 @@
+Upgrade-requirements
+Pandas 
+streamlit==1.7.0
+Tensorflow
+Ludwig 
+Pathlib
+numpy
+ray
+Transformers
