@@ -39,10 +39,19 @@ def prediction(input):
     final.informational = final.informational.apply(prob_handle)
     return final
 
-preds = prediction(input)
-
-st.write('Keyword intents are: ', preds)
-st.download_button(
-  "Press to download", preds.to_csv().encode('utf-8'), 'preds.csv', 'text/csv', key='download-csv'
+def main():
+    preds = prediction(input)
+    st.write('Keyword intents are: ', preds)
+    st.download_button("Press to download", preds.to_csv().encode('utf-8'), 'preds.csv', 'text/csv', key='download-csv'
 )
+
+if __name__ == '__main__':
+    main()
+
+# preds = prediction(input)
+
+# st.write('Keyword intents are: ', preds)
+# st.download_button(
+#   "Press to download", preds.to_csv().encode('utf-8'), 'preds.csv', 'text/csv', key='download-csv'
+# )
 
